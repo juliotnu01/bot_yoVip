@@ -16,8 +16,8 @@ class verifyAccessTokenFacebook
     public function handle($request, Closure $next)
     {
 
-        if ($request->input("hub_mode") === "subscribe" && $request->input("hub_verify_token") === env("MESSENGER_VERIFY_TOKEN")) {
-        return response($request->input("hub_challenge"), 200);
+        if ($request->input("hub.mode") === "subscribe" && $request->input("hub.verify_token") === env("MESSENGER_VERIFY_TOKEN")) {
+        return response($request->input("hub.challenge"), 200);
         dd($request);
         }
         return $next($request);

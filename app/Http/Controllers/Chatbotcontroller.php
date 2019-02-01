@@ -10,7 +10,8 @@ class Chatbotcontroller extends Controller
      public function index(Request $request)
     {
     	$data = $request->all();
-    	$id = $data["entry"];
+    	dd($data);
+
     	
     }
 }
