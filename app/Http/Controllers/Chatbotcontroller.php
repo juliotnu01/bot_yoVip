@@ -8,7 +8,7 @@ class Chatbotcontroller extends Controller
 {
     public function index()
     {
-    	$input json_decode(file_get_contents('php://input'), true);
+    	$input = json_decode(file_get_contents('php://input'), true);
     	dd($input);
 
     }
