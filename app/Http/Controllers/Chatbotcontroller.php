@@ -15,7 +15,7 @@ class Chatbotcontroller extends Controller
     	
     }
 
-    private function verifytoken(){
+    private function verifytoken(Request $request){
 
         if ($request->input("hub.mode") === "subscribe" && $request->input("hub.verify_token") === env("MESSENGER_VERIFY_TOKEN")) {
         return response($request->input("hub.challenge"), 200);
