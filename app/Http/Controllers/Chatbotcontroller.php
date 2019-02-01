@@ -9,7 +9,7 @@ class Chatbotcontroller extends Controller
 {
      public function index(Request $request)
     {
-    	$data = File::get('fb.text');
+    	$data = json_decode(file_get_contents('php://input'));
     	dd($data);
 
     	
