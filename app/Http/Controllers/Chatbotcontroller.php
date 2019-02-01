@@ -9,9 +9,17 @@ class Chatbotcontroller extends Controller
 {
      public function index(Request $request)
     {
-    	$data = $request->all();
-    	dd($data);
-
+    	// $data = $request->all();
+    	// dd($data);
+    	$this->verifytoken();
     	
+    }
+
+    private function verifytoken(){
+
+        if ($request->input("hub.mode") === "subscribe" && $request->input("hub.verify_token") === env("MESSENGER_VERIFY_TOKEN")) {
+        return response($request->input("hub.challenge"), 200);
+        dd($request);
+        }
     }
 }
