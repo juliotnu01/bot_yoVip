@@ -11,7 +11,7 @@
 |
 */
 
-Route::match(['get', 'post'], 'webhook', 'Chatbotcontroller@index');
+Route::match(['get', 'post'], 'webhook', 'Chatbotcontroller@index')->middleware('facebookAccess');
 
 Route::get('/', function () {
     return FILE::get('fb.txt');
