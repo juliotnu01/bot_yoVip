@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +13,5 @@
 Route::match(['get', 'post'], 'webhook', 'Chatbotcontroller@index')->middleware('facebookAccess');
 
 Route::get('/', function () {
-    return FILE::get('fb.txt');
+    return File::get('fb.txt');
 });
