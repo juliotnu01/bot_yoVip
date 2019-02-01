@@ -11,7 +11,7 @@
 |
 */
 
-Route::match(['get', 'post'], 'webhook', 'Chatbotcontroller@index')->middleware('facebookAccess');
+Route::match(['get', 'post'], 'webhook', 'Chatbotcontroller@index');
 
 Route::get('/', function () {
     return view('welcome');
