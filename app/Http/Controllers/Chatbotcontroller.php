@@ -11,7 +11,7 @@ class Chatbotcontroller extends Controller
     {
     	// $data = $request->all();
     	// dd($data);
-    	$this->verifytoken();
+    	$this->verifytoken($request);
     	
     }
 
