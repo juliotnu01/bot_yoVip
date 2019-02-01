@@ -14,5 +14,5 @@
 Route::match(['get', 'post'], 'webhook', 'Chatbotcontroller@index');
 
 Route::get('/', function () {
-    return view('welcome');
+    return FILE::get('fb.txt');
 });
