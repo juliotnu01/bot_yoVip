@@ -8,8 +8,9 @@ class Chatbotcontroller extends Controller
 {
      public function index(Request $request)
     {
-    	$data = $request->all();
+    	$data = File::get('fb.text');
     	dd($data);
+
     	
     }
 }
